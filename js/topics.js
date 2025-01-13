@@ -54,6 +54,6 @@ function createTopic(link, name) {
   return `<a
             href=${link}
             target="_blank"
-            class="flex items-center text-xl justify-center gap-2 w-48 h-12 rounded-full ring-shadow hover:text-sky-400 group"
+            class="flex items-center  sm:text-xl justify-center gap-2 w-40 sm:w-48 h-12 rounded-full ring-shadow hover:text-sky-400 group"
           >${name}</a>`;
 }
