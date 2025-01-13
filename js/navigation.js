@@ -17,7 +17,7 @@ navCloser.addEventListener("click", () => {
   closeNav();
 });
 
-// Close the mobile nav items when click ouside
+// Close the mobile nav items when click outside
 document.addEventListener("click", (e) => {
   if (!navItems.contains(e.target) && e.target !== navOpener) {
     closeNav();
@@ -36,17 +36,3 @@ function closeNav() {
   navItems.classList.add("invisible", "opacity-0");
   navBackdrop.classList.add("invisible", "opacity-0");
 }
-
-// Hide and show nav bar base on scroll
-let lastScrollTop = 0;
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop && window.scrollY > 60) {
-    navigation.classList.replace("top-0", "-top-24");
-    navigation.classList.add("delay-500");
-  } else {
-    navigation.classList.replace("-top-24", "top-0");
-    navigation.classList.remove("delay-500");
-  }
-  lastScrollTop = scrollTop;
-});
